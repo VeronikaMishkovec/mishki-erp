@@ -13,10 +13,12 @@ const App = () => {
       </div>
       <div className="row">
         <div className="col">
-          <Posts />
+          <h2>Синхронные посты</h2>
+          <Posts posts={[]} />
         </div>
         <div className="col">
-          <FetchedPosts />
+          <h2>Асинхронные посты</h2>
+          <FetchedPosts posts={[]} />
         </div>
       </div>
     </div>

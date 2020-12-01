@@ -1,11 +1,11 @@
 import React from "react";
+import Post from "../components/Post";
 
-const Posts = () => {
-  return (
-    <div>
-      <h1>Posts </h1>
-    </div>
-  );
+const Posts = ({ posts }) => {
+  if (!posts.length) {
+    return <p className="text-center">Постов пока нет</p>;
+  }
+  return posts.map((post) => <Post post={post} key={post} />);
 };
 
 export default Posts;
