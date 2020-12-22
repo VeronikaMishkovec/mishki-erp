@@ -3,6 +3,8 @@ import { Input, Space, Button } from "antd";
 import "antd/dist/antd.css";
 import "./App.css";
 import firebase from "firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { getDate } from "./redux/action/action";
 
 const App = () => {
   const [email, setEmail] = useState("");
@@ -39,6 +41,17 @@ const App = () => {
     db.ref(key).push(value);
     console.log("awesome");
   };
+
+  const dispatch = useDispatch();
+  const date = useSelector((state) => state.date);
+
+  useEffect(() => {
+    dispatch(getDate());
+  }, []);
+
+  useEffect(() => {
+    console.log('selector', date);
+  }, [date]);
 
   return (
     <div className="wrapp">
