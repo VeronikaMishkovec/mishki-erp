@@ -4,6 +4,7 @@ import App from "./App";
 import firebase from "firebase";
 import { createStore, compose } from "redux";
 import { Provider } from "react-redux";
+import { rootReducer } from "./redux/reducer/rootReducer";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAnAaMjcN_CEYj4WqVKLz3nZP1pnTud8Zg",
@@ -18,6 +19,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const store = createStore(
+  rootReducer,
   compose(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
