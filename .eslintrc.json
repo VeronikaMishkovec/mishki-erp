@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "plugin:css-modules/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "plugins": ["react-hooks", "prettier", "css-modules"],
+  "rules": {
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-inferrable-types": ["error", { "ignoreParameters": true }],
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "react/jsx-props-no-spreading": "warn",
+    "react/no-array-index-key": "warn",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-unsafe-return": "warn",
+    "@typescript-eslint/no-unsafe-member-access": ["warn"],
+    "@typescript-eslint/no-unsafe-call": "warn",
+
+    // base-rules
+    "object-curly-newline": ["error", { "multiline": true }],
+    "sort-keys": "error"
+  }
+}
