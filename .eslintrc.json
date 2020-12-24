@@ -35,6 +35,10 @@
     "@typescript-eslint/no-unsafe-return": "warn",
     "@typescript-eslint/no-unsafe-member-access": ["warn"],
     "@typescript-eslint/no-unsafe-call": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
 
     // base-rules
     "object-curly-newline": ["error", { "multiline": true }],
