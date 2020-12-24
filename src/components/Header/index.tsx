@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import firebase from 'firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDate } from '../../store/actions/setDate';
+import { users } from '../../store/actions/usersAction';
 import { sendDataToFirebase } from '../../utils/utils';
 
 export const Header = () => {
@@ -32,6 +33,13 @@ export const Header = () => {
         }}
       >
         Set Date
+      </Button>
+      <Button
+        onClick={() => {
+          dispatch(users());
+        }}
+      >
+        Users
       </Button>
     </header>
   );
