@@ -1,46 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { DateTime } from 'luxon';
-import { Button } from 'antd';
+import React, { useEffect } from 'react';
 import firebase from 'firebase';
-import { useDispatch, useSelector } from 'react-redux';
-import { setDate } from '../../store/actions/setDate';
-import { users } from '../../store/actions/usersAction';
-import { sendDataToFirebase } from '../../utils/utils';
+import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
+import { Button } from 'antd';
+// import { projectsList } from '../../store/actions/projectsList';
 
 export const Header = () => {
   const dispatch = useDispatch();
-  // const startDate = useSelector((state) => state.startDate);
-  const [startDate, setStartDate] = useState('');
-  const today: string = DateTime.local().toString();
-
-  // const sendData = () => {
-  //   const db: any = firebase.database();
-  //   db.ref('startDate').push(startDate);
-  // };
+  const projectsListSelector = useSelector((state: RootStateOrAny) => state.projectsList);
 
   useEffect(() => {
-    dispatch(setDate(startDate));
+    // dispatch(projectsList());
   }, []);
 
   return (
     <header>
       <h1>MishkiERP</h1>
-      <Button
-        type="primary"
-        onClick={() => {
-          setStartDate(today);
-          sendDataToFirebase('startDate', startDate);
-        }}
-      >
-        Set Date
-      </Button>
-      <Button
-        onClick={() => {
-          dispatch(users());
-        }}
-      >
-        Users
-      </Button>
+      <Button type="primary">Set Data</Button>
     </header>
   );
 };

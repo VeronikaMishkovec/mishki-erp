@@ -1,1 +1,1 @@
-export const START_DATE = 'START_DATE';
+export const PROJECTS_LIST = 'GET/PROJECT_LIST';
