@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { setDateReducer } from './setDateReducer';
-import { usersReducer } from './usersReducer';
+import { projectsList } from './projectsList';
 
-export const rootReducer = combineReducers({ startDate: setDateReducer, user: usersReducer });
+export const rootReducer = combineReducers({ projectsList });

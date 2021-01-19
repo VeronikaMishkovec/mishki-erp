@@ -8,18 +8,6 @@ import thunk from 'redux-thunk';
 import { App } from './App';
 import { rootReducer } from './store/reducer/rootReducer';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyAnAaMjcN_CEYj4WqVKLz3nZP1pnTud8Zg',
-  appId: '1:1062519280923:web:2b698c9bf742847fe2afbe',
-  authDomain: 'mishki-erp-29a42.firebaseapp.com',
-  databaseURL: 'https://mishki-erp-29a42-default-rtdb.firebaseio.com',
-  messagingSenderId: '1062519280923',
-  projectId: 'mishki-erp-29a42',
-  storageBucket: 'mishki-erp-29a42.appspot.com',
-};
-
-firebase.initializeApp(firebaseConfig);
-
 // const db = firebase.firestore();
 
 // db.collection('users').add({
@@ -40,7 +28,7 @@ declare global {
 }
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer, compose(composeEnhancers(), applyMiddleware(thunk)));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
