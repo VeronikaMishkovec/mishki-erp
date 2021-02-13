@@ -1,0 +1,17 @@
+$btn: #007a79;
+$hover: #c7cedf;
+$text: #002a29;
+
+@mixin btns {
+  background-color: $btn !important;
+  border-color: $btn !important;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+@mixin hover-btns {
+  background-color: $hover !important;
+  border-color: $hover !important;
+  margin-right: 15px;
+  color: $text !important;
+}

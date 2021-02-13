@@ -1,0 +1,14 @@
+@import '../../mixins.scss';
+
+.counterWrapper {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn {
+  @include btns;
+
+  &:hover, &:active {
+    @include hover-btns
+  }
+}
