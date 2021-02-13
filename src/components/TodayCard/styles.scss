@@ -1,0 +1,12 @@
+.todayCard {
+  display:flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ef7b4f;
+
+  .header, .time {
+    font-size: 20px;
+  }
+}

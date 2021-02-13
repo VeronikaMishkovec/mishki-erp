@@ -9,3 +9,12 @@
     margin: 50px auto;
   }
 }
+
+.ant-btn-primary {
+  background: #3d6c6f;
+  border-color: #3d6c6f;
+
+  &:hover {
+    background: #72a2ac
+  }
+}

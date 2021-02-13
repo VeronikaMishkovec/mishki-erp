@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import firebase from 'firebase';
 import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
+import { TodayCard } from '../TodayCard';
+import { Counter } from '../Counter';
+
 // import { projectsList } from '../../store/actions/projectsList';
 
 export const Header = () => {
@@ -15,7 +18,8 @@ export const Header = () => {
   return (
     <header>
       <h1>MishkiERP</h1>
-      <Button type="primary">Set Data</Button>
+      <TodayCard />
+      <Counter />
     </header>
   );
 };
